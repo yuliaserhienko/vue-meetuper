@@ -1,8 +1,11 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+// eslint-disable-next-line no-unused-vars
 const Meetup = require('./meetups');
+// eslint-disable-next-line no-unused-vars
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
+// eslint-disable-next-line no-unused-vars
 const config = require('../config/dev')
 
 const userSchema = new Schema({
@@ -11,6 +14,7 @@ const userSchema = new Schema({
            required: 'Email is Required',
            lowercase: true,
            unique: true,
+    // eslint-disable-next-line no-useless-escape
            match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/]},
   name: { type: String,
           required: true,

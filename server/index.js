@@ -16,7 +16,9 @@ const meetupsRoutes = require('./routes/meetups'),
       categoriesRoutes = require('./routes/categories');
 
 mongoose.connect(config.DB_URI, { useNewUrlParser: true })
+  // eslint-disable-next-line no-console
   .then(() => console.log('DB Connected!'))
+  // eslint-disable-next-line no-console
   .catch(err => console.log(err));
 
 const app = express();
@@ -32,5 +34,6 @@ app.use('/api/v1/categories', categoriesRoutes);
 const PORT = process.env.PORT || 3001;
 
 app.listen(PORT , function() {
-  console.log('App is running on port: ' + PORT);
+  // eslint-disable-next-line no-console
+  return console.log('App is running on port: ' + PORT);
 });
