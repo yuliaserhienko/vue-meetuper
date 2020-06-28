@@ -68,6 +68,7 @@
       "eslint:recommended"
     ],
     "rules": {
+      "no-console": "error",
       "no-debugger": 0
     },
     "parserOptions": {
